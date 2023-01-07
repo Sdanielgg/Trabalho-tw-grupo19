@@ -56,7 +56,7 @@ def containerGerirJogos():
     listaJogos = lerJogos()
     refreshListboxJogos(listaJogos,tview)
 
-    global image1, image2
+    global imageInserir, imageRemover
     imageInserir = PhotoImage(file = "images\\adicionar.png")
     btnInserir = Button(panelJogos, image = imageInserir, width=200, height=48, text = "Inserir Jogo", compound=LEFT,
                 command= lambda: inserirJogo(jogo.get(), categoria.get(), pontuacao.get(), ano.get(), tview))
