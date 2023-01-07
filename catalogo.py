@@ -4,6 +4,7 @@ from tkinter.ttk import Combobox
 from tkinter import ttk       
 from tkinter import filedialog   
 from tkinter import messagebox   
+from PIL import ImageTk,Image 
 from gerirJogos import *
 from pesquisa import *
 
@@ -23,15 +24,15 @@ def containerGerirJogos():
 
     categoria =  StringVar()
     listaCategorias = ["FPS","RPG","Battle Royale","Ação","Estratégia","Desporto","Corrida","Simulação"]
-    cbCategoria = Combobox(panelJogos,values=listaCategorias,textvariable=categoria)
-    cbCategoria.place(x=80,y=120)
+    cbCategoria = Combobox(panelJogos,values=listaCategorias,textvariable=categoria,width=20)
+    cbCategoria.place(x=90,y=120)
 
     lblPontuacao = Label(panelJogos,text="Pontuação")
     lblPontuacao.place(x=30,y=170)
 
     pontuacao = StringVar()
-    spinPontuacao = Spinbox(panelJogos,width=10,from_=1,to=5,textvariable=pontuacao)
-    spinPontuacao.place(x=80,y=170)
+    spinPontuacao = Spinbox(panelJogos,width=21,from_=1,to=5,textvariable=pontuacao)
+    spinPontuacao.place(x=95,y=170)
 
     lblAno = Label(panelJogos,text="Ano")
     lblAno.place(x=30,y=220)
@@ -47,9 +48,9 @@ def containerGerirJogos():
     tview.column("Pontuação",width=100,anchor="c")
     tview.column("Ano",width=100,anchor="c")
     tview.heading("Jogo",text="Jogo")
-    tview.heading("Categoria",text="Jogo")
-    tview.heading("Pontuação",text="Jogo")
-    tview.heading("Ano",text="Jogo")
+    tview.heading("Categoria",text="Categoria")
+    tview.heading("Pontuação",text="Pontuação")
+    tview.heading("Ano",text="Ano")
     tview.place(x=280,y=70)
 
     listaJogos = lerJogos()
@@ -86,6 +87,4 @@ btnOpcaoGerir = Button(panelOpçoes, text = "Gerir \nJogos", image = imageComand
                     command=containerGerirJogos)
 btnOpcaoGerir.place (x=5, y=130)
 
-
-
-
+window.mainloop()
