@@ -21,7 +21,7 @@ def containerGerirJogos():
     lblCategoria.place(x=30,y=120)
 
     categoria =  StringVar()
-    listaCategorias = ["FPS","RPG","Battle Royale","Ação","Estratégia","Desporto","Corrida","Simulação"]
+    listaCategorias = ["FPS","RPG","Battle Royale","Ação-Aventura","Estratégia","Desporto","Corrida","Simulação"]
     cbCategoria = Combobox(panelJogos,values=listaCategorias,textvariable=categoria,width=20)
     cbCategoria.place(x=90,y=120)
 
@@ -41,7 +41,7 @@ def containerGerirJogos():
 
     tview = ttk.Treeview(panelJogos,height=10,selectmode="browse",columns=("Jogo","Categoria","Pontuação","Ano"),show="headings")
 
-    tview.column("Jogo",width=100,anchor="c")
+    tview.column("Jogo",width=135,anchor="c")
     tview.column("Categoria",width=100,anchor="c")
     tview.column("Pontuação",width=100,anchor="c")
     tview.column("Ano",width=100,anchor="c")
@@ -73,7 +73,7 @@ def containerConsultarJogos():
     lblCategoria.place(x=10,y=30)
 
     categoria =  StringVar()
-    listaCategorias = ["FPS","RPG","Battle Royale","Ação","Estratégia","Desporto","Corrida","Simulação"]
+    listaCategorias = ["FPS","RPG","Battle Royale","Ação-Aventura","Estratégia","Desporto","Corrida","Simulação"]
     cbCategoria = Combobox(panelConsulta,values=listaCategorias,textvariable=categoria,width=20)
     cbCategoria.place(x=70,y=30)
 

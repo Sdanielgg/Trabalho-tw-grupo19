@@ -1,3 +1,6 @@
 GTA V;Ação;5;2013
 CS:GO;FPS;5;2012
 Valorant;FPS;4;2020
+Forza Horizon 5;Corrida;4;2021
+Red Dead Redemption 2;Ação-Aventura;5;2018
+
