@@ -1,6 +1,5 @@
 #Bibliotecas
 from tkinter import *
-from tkinter import messagebox
 from tkinter import ttk  
 
 fJogos= "files/jogos.txt"
@@ -17,11 +16,13 @@ def inserirJogo(jogo, categoria, pontuacao, ano, tview):
 def removerJogo(tview):
 
     index = tview.index(tview.selection())
-    print(index)
     tview.delete(tview.selection())
+    lista = lerJogos()
 
-    fileJogos=open(fJogos, "w+", encoding="utf-8")
-    lista = fileJogos.readlines()     
+    fileJogos=open(fJogos, "w", encoding="utf-8")
+    for count, line in enumerate(lista):
+        if count != index:
+            fileJogos.write(line)
     fileJogos.close()
 
     lista = lerJogos()
