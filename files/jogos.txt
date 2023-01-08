@@ -3,4 +3,8 @@ CS:GO;FPS;5;2012
 Valorant;FPS;4;2020
 Forza Horizon 5;Corrida;4;2021
 Red Dead Redemption 2;Ação-Aventura;5;2018
-
+FIFA 22;Desporto;2;2021
+Uncharted 4: A Thief's End;Ação-Aventura;5;2016
+Goat Simulator;Simulação;1;2014
+The Elder Scrolls V: Skyrim;RPG;5;2011
+The Legend of Zelda: Breath of the Wild;Ação-Aventura;5;2017

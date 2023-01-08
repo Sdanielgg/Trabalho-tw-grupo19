@@ -51,9 +51,6 @@ def containerGerirJogos():
     tview.heading("Ano",text="Ano")
     tview.place(x=280,y=70)
 
-    listaJogos = lerJogos()
-    refreshListboxJogos(listaJogos,tview)
-
     global imageInserir, imageRemover
     imageInserir = PhotoImage(file = "images\\adicionar.png")
     btnInserir = Button(panelJogos, image = imageInserir, width=200, height=48, text = "Inserir Jogo", compound=LEFT,
@@ -64,6 +61,9 @@ def containerGerirJogos():
     btnRemover = Button(panelJogos, image = imageRemover, width=200, height=48,  text = "Remover Jogo", compound=LEFT,
                 command= lambda: removerJogo(tview))
     btnRemover.place(x=510, y= 320)
+
+    listaJogos = lerJogos()
+    refreshListboxJogos(listaJogos,tview)
 
 def containerConsultarJogos():
     panelConsulta = PanedWindow(window,width=750,height=450)
@@ -84,9 +84,9 @@ def containerConsultarJogos():
 
     tview2 = ttk.Treeview(panelConsulta, columns = ("Jogo", "Categoria", "Pontuação", "Ano"), show = "headings", height = 12, selectmode = "browse")
     tview2.column("Jogo", width = 220, anchor = "c")
-    tview2.column("Categoria", width = 100, anchor = "c")
-    tview2.column("Pontuação", width = 220, anchor = "c")
-    tview2.column("Ano", width = 220, anchor = "c")
+    tview2.column("Categoria", width = 180, anchor = "c")
+    tview2.column("Pontuação", width = 100, anchor = "c")
+    tview2.column("Ano", width = 100, anchor = "c")
 
     tview2.heading("Jogo", text = "Jogo")
     tview2.heading("Categoria", text = "Categoria")
