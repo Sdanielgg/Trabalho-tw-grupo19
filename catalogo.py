@@ -2,7 +2,7 @@
 from tkinter import *
 from tkinter.ttk import Combobox
 from tkinter import ttk       
-from PIL import ImageTk,Image 
+#from PIL import ImageTk,Image 
 from gerirJogos import *
 from consultar import *
 from paginaJogo import *
@@ -25,6 +25,13 @@ def containerGerirJogos():
     listaCategorias = ["FPS","RPG","Battle Royale","Ação-Aventura","Estratégia","Desporto","Corrida","Simulação"]
     cbCategoria = Combobox(panelJogos,values=listaCategorias,textvariable=categoria,width=20)
     cbCategoria.place(x=90,y=120)
+
+    lblPontuacao = Label(panelJogos,text="Pontuação")
+    lblPontuacao.place(x=30,y=170)
+
+    pontuacao = StringVar()
+    spinPontuacao = Spinbox(panelJogos,width=3,from_=1,to=5,textvariable=pontuacao)
+    spinPontuacao.place(x=95,y=172)
 
     lblAno = Label(panelJogos,text="Ano")
     lblAno.place(x=30,y=220)
@@ -144,7 +151,7 @@ def containerPaginaJogo(tview2):
 
     global imageAdicionar
     imageAdicionar = PhotoImage(file = "images\\adicionar.png")
-    btnInserir = Button(panelPaginaJogo, image = imageAdicionar, width=200, height=48, text = "Adicionar aos\nteus jogos", compound=LEFT)
+    btnInserir = Button(panelPaginaJogo, image = imageAdicionar, width=200, height=48, text = "Adicionar aos\nfavoritos", compound=LEFT)
     btnInserir.place(x=500, y= 4)
 
     btnPontuar = Button(panelPaginaJogo,width=10, height=1, text = "Pontuar Jogo")
