@@ -151,15 +151,18 @@ def containerPaginaJogo(tview2):
 
     global imageAdicionar
     imageAdicionar = PhotoImage(file = "images\\adicionar.png")
-    btnInserir = Button(panelPaginaJogo, image = imageAdicionar, width=200, height=48, text = "Adicionar aos\nfavoritos", compound=LEFT)
-    btnInserir.place(x=500, y= 4)
+    btnAdicionar = Button(panelPaginaJogo, image = imageAdicionar, width=200, height=48, text = "Adicionar aos\nmeus jogos", compound=LEFT)
+    btnAdicionar.place(x=500, y= 4)
+
+    btnAdicionar2 = Button(panelPaginaJogo, image = imageAdicionar, width=200, height=48, text = "Adicionar aos\nfavoritos", compound=LEFT)
+    btnAdicionar2.place(x=500, y= 80)
 
     btnPontuar = Button(panelPaginaJogo,width=10, height=1, text = "Pontuar Jogo")
-    btnPontuar.place(x=500, y= 80)
+    btnPontuar.place(x=350, y= 4)
 
     pontuacao2 = StringVar()
     spinPontuacao = Spinbox(panelPaginaJogo,width=3,from_=1,to=5,textvariable=pontuacao2)
-    spinPontuacao.place(x=590,y=83)
+    spinPontuacao.place(x=440,y=7)
 
     tview3 = ttk.Treeview(panelPaginaJogo, columns = ("Utilizador", "Comentário"), show = "headings", height = 10, selectmode = "browse")
 
@@ -196,7 +199,7 @@ panelOpçoes = PanedWindow(window, bg = "gray", width=250, height=500)
 panelOpçoes.place(x=0, y=0)
 
 imageGerir = PhotoImage(file = "images\\gerir.png")
-btnOpcaoGerir = Button(panelOpçoes, text = "Gerir os\nteus jogos", image = imageGerir, compound=LEFT, relief = "sunken", 
+btnOpcaoGerir = Button(panelOpçoes, text = "Gerir os\nmeus jogos", image = imageGerir, compound=LEFT, relief = "sunken", 
                     width = 230, height = 68, font="calibri, 11",
                     command=containerGerirJogos)
 btnOpcaoGerir.place (x=5, y=130)
