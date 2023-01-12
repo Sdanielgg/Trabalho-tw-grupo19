@@ -286,6 +286,8 @@ def abrirCatalogo():
         btnCommentar.place(x=540,y=400)
 
     window=Toplevel()
+    window.focus_force()
+    window.grab_set()
     screenWidth = window.winfo_screenwidth()
     screenHeight = window.winfo_screenheight()
     appWidth = 1000                             
@@ -299,11 +301,11 @@ def abrirCatalogo():
     panelOpcoes.place(x=0, y=0)
 
     imageGerir = PhotoImage(file = "images\\gerir.png")
-    btnOpcaoGerir = Button(panelOpcoes, text = "Gerir os\nmeus jogos", image = imageGerir, compound=LEFT, relief = "sunken",width = 230, height = 68, font="calibri, 11",command=containerGerirJogos)
+    btnOpcaoGerir = Button(panelOpcoes, text = "Gerir os\nmeus jogos", image = imageGerir, compound=LEFT,width = 230, height = 68, font="calibri, 11",command=containerGerirJogos)
     btnOpcaoGerir.place (x=5, y=130)
 
     imageConsulta = PhotoImage(file = "images\\consultar.png" )
-    btnOpcao2 = Button(panelOpcoes, text = "Consultar \nJogos", relief = "sunken", image = imageConsulta, compound=LEFT,width = 230, height = 68,  font="calibri, 11",command=containerConsultarJogos)
+    btnOpcao2 = Button(panelOpcoes, text = "Consultar \nJogos", image = imageConsulta, compound=LEFT,width = 230, height = 68,  font="calibri, 11",command=containerConsultarJogos)
     btnOpcao2.place (x=5, y=210)
 
     containerGerirJogos()
